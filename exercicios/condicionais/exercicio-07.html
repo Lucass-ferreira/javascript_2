@@ -9,9 +9,18 @@
     <script>
         let x = 2
 
-        switch(x) {
-            case x:
-                alert(typeof(x))
+        switch(typeof x) {
+            case "number":
+                alert("x é numero")
+                break
+            case "string":
+                alert("x é texto")
+                break
+            case "boolean":
+                alert("x é boleana")
+                break
+            case "undefined":
+                alert("x é undefined")
                 break
             default:
                 alert("desconheço este tipo de variavel!")
