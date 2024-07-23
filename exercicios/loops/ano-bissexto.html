@@ -9,18 +9,23 @@
     <h1>Ano bissexto</h1>
 
     <script>
-        // let cont = 1004
-
-        // do {
-        //     document.write(cont + "<br>")
-        //     cont += 4
-        // } while (cont <= 2024);
-
         for(let cont = 1004; cont <= 2024; cont += 4) {
             if(cont % 100 != 0 || cont % 400 === 0){
                 document.write(cont + "<br>")
             }
         }
+
+        //revisão
+        // for (let ano = 1004; ano <= 2024; ano += 4) {
+
+        //     let anoBissexto = ano % 100 != 0 || ano % 400 === 0
+
+        //     if (anoBissexto) {
+        //         document.write(ano + " é ano bissexto")
+        //     } else {
+        //         document.write(ano + " não é ano bissexto")
+        //     }
+        // }
     </script>
 </body>
 </html>
