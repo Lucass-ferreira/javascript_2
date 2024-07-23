@@ -16,7 +16,38 @@
             }
         }
 
-        document.write("fim do loop")
+        document.write("fim do loop break")
+
+        for (let ind = 1; ind < 10; ind++) {
+            if (ind === 5) {
+                continue
+            }
+            console.log(ind)
+        }
+        console.log("fim do loop continue")
+
+        console.log("--------- loop while")
+
+        let x = 1;
+        while (x < 10) {
+            console.log(x)
+            if (x === 5) {
+                break
+            }
+            x++
+        }
+        console.log("fim do loop while com break")
+
+        x = 1;
+        while (x < 10) {
+            if (x === 5) {
+                x++
+                continue
+            }
+            console.log(x)
+            x++
+        }
+        console.log("fim do loop while com continue")
     </script>
 </body>
 </html>
