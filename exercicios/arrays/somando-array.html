@@ -9,13 +9,17 @@
     <h1>Array</h1>
 
     <script>
-        const numeros = [3, 5, 9, 8, 7, 4]
-        let numero = 0
+        const numeros = [3, undefined, [], 5, "4", 9, "ola mundo", 8, "32", 7, false, 4, null]
+        let soma = 0
 
         for(let ind = 0; ind < numeros.length; ind++) {
-            numero += numeros[ind]
+            let numero = numeros[ind]
+
+            if(typeof numero === "number"){
+                soma += numero
+            }
         }
-        alert("a soma de todo os numero é " + numero)
+        alert("a soma de todo os numero é " + soma)
     </script>
 </body>
 </html>
