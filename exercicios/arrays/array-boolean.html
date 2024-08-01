@@ -9,25 +9,32 @@
     <h1>array</h1>
 
     <script>
-        const valores = [null, null, 3, "9", undefined, "qualquer texto", NaN]
-        let valorNull = 0
-        let valorUndefined = 0
-        let valorNaN = 0
+        const valores = [null, null, 3, "9", undefined, "qualquer texto", NaN, parseFloat("kjakwak")]
+        let encontrou = false
+        // let valorNull = 0
+        // let valorUndefined = 0
+        // let valorNaN = 0
 
         for(let ind = 0; ind < valores.length; ind++){
-            console.log(ind)
-            if(isNaN(valores[ind]) && typeof valores[ind] === 'number'){
-                valorNaN++
-            } else if (valores[ind] === null){
-                valorNull++
-            } else if (valores[ind] === undefined) {
-                valorUndefined++
+            let num = valores[ind]
+
+            if(num === null || num === undefined || isNaN(num) ) {
+                encontrou = true
+                break
             }
+            // if(isNaN(valores[ind]) && typeof valores[ind] === 'number'){
+            //     valorNaN++
+            // } else if (valores[ind] === null){
+            //     valorNull++
+            // } else if (valores[ind] === undefined) {
+            //     valorUndefined++
+            // }
         }
         
-        alert("valores null foi encontrado " + valorNull + " vezes")
-        alert("valores undefined foi encontrado " + valorUndefined + " vezes")
-        alert("valores NaN foi encontrado " + valorNaN + " vezes")
+        alert("Encontrou null, undefined ou NaN? " + encontrou)
+        // alert("valores null foi encontrado " + valorNull + " vezes")
+        // alert("valores undefined foi encontrado " + valorUndefined + " vezes")
+        // alert("valores NaN foi encontrado " + valorNaN + " vezes")
     </script>
 </body>
 </html>
