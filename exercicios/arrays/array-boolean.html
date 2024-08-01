@@ -9,21 +9,22 @@
     <h1>array</h1>
 
     <script>
-        const valores = [null, 3, "9", undefined, "qualquer texto", parseFloat()]
+        const valores = [null, null, 3, "9", undefined, "qualquer texto", NaN]
         let valorNull = 0
         let valorUndefined = 0
         let valorNaN = 0
 
         for(let ind = 0; ind < valores.length; ind++){
-            if((valores[ind]) === null){
+            console.log(ind)
+            if(isNaN(valores[ind]) && typeof valores[ind] === 'number'){
+                valorNaN++
+            } else if (valores[ind] === null){
                 valorNull++
-            } //else if ((typeof valores[ind]) === undefined) {
-            //     valorUndefined++
-            // } else if (typeof(valores[ind]) === NaN) {
-            //     valorNaN++
-            // }
+            } else if (valores[ind] === undefined) {
+                valorUndefined++
+            }
         }
-
+        
         alert("valores null foi encontrado " + valorNull + " vezes")
         alert("valores undefined foi encontrado " + valorUndefined + " vezes")
         alert("valores NaN foi encontrado " + valorNaN + " vezes")
