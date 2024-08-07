@@ -17,8 +17,6 @@
     <ul id="pessoas"></ul>
 
     <script>
-        let pessoaLista = document.getElementById("pessoas")
-
         const usuarios = [ 
             {nome: "Lucas", email: "eumesmo@gmail"}, 
             {nome: "Juliana", email: "julymesmo@gmail"}, 
@@ -26,6 +24,8 @@
             {nome: "Carolina", email: "carolmesmo@gmail"},
             {nome: "Marcos", email: "marcosmesmo@gmail"}
         ]
+        
+        let pessoaLista = document.getElementById("pessoas")
 
         for(let ind = 0; ind < usuarios.length; ind++) {
             pessoaLista.innerHTML += (`<li>${usuarios[ind].nome}: ${usuarios[ind].email}`)
